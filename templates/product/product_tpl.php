@@ -1,4 +1,4 @@
-<div class="title-main"><span>Dự án</span></div>
+<div class="title-main"><span>Sản phẩm</span></div>
 <div class="content-main w-clear">
     <div class="row">
         <div class="grid-page-pro">

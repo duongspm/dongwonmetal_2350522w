@@ -5,7 +5,7 @@
                 data-options="zoomMode: off; hint: off; rightClick: true; selectorTrigger: hover; expandCaption: false; history: false;"
                 href="<?=ASSET.WATERMARK?>/product/540x540x1/<?=UPLOAD_PRODUCT_L.$rowDetail['photo']?>"
                 title="<?=$rowDetail['name'.$lang]?>">
-                <?=$func->getImage(['isLazy' => false, 'sizes' => '540x540x1', 'isWatermark' => true, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $rowDetail['photo'], 'alt' => $rowDetail['name'.$lang]])?>
+                <?=$func->getImage(['isLazy' => false, 'sizes' => '340x340x1', 'isWatermark' => true, 'prefix' => 'product', 'upload' => UPLOAD_PRODUCT_L, 'image' => $rowDetail['photo'], 'alt' => $rowDetail['name'.$lang]])?>
             </a>
             <?php if($rowDetailPhoto) { if(count($rowDetailPhoto) > 0) { ?>
             <div class="gallery-thumb-pro">
@@ -48,11 +48,22 @@
             <ul class="attr-pro-detail">
 
                 <li class="w-clear">
+                    <label class="attr-label-pro-detail"><?=gia?>:</label>
+                    <div class="attr-content-pro-detail">
+                        <?php if($rowDetail['sale_price']) { ?>
+                        <span class="price-new-pro-detail"><?=$func->formatMoney($rowDetail['sale_price'])?></span>
+                        <span class="price-old-pro-detail"><?=$func->formatMoney($rowDetail['regular_price'])?></span>
+                        <?php } else { ?>
+                        <span
+                            class="price-new-pro-detail"><?=($rowDetail['regular_price']) ? $func->formatMoney($rowDetail['regular_price']) : lienhe?></span>
+                        <?php } ?>
+                    </div>
+                </li>
+                <li class="w-clear">
                     <label class="attr-label-pro-detail"><?=luotxem?>:</label>
                     <div class="attr-content-pro-detail"><?=$rowDetail['view']?></div>
                 </li>
             </ul>
-
             <br>
             <div>
                 <?=(!empty($rowDetail['desc'.$lang])) ? nl2br(htmlspecialchars_decode($rowDetail['desc'.$lang])) : ''?>

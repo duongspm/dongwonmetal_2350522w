@@ -2,24 +2,14 @@
 	if(!defined('SOURCES')) die("Error");
 
     //need    
+    
     $slider = $cache->get("select name$lang, photo, link from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('slide'), 'result', 7200);
         
-    $about = $cache->get("select name$lang,desc$lang,content$lang,date_created, slugvi, slugen, photo from #_news where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by id desc", array('gioi-thieu'), 'result', 7200);
-        
-    $productnb = $cache->get("select name$lang,photo,desc$lang,slugvi,slugen,regular_price, id from #_product where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status)", array('san-pham'), 'result', 7200);
-    
-    $productlist = $cache->get("select name$lang, slugvi, slugen, id from #_product_list where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('san-pham'), 'result', 7200);
-    
-    $duan = $cache->get("select name$lang, desc$lang, slugvi, slugen, id, photo from #_news where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('du-an'), 'result', 7200);
-        
-    $feedback = $cache->get("select name$lang, desc$lang, content$lang, id, photo from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('feedback'), 'result', 7200);
-    
+    $bannerr = $cache->get("select name$lang, photo, link from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('bannerr'), 'result', 7200);
+
     $newsnb = $cache->get("select name$lang, slugvi, slugen, desc$lang, date_created, id, photo from #_news where type = ? and find_in_set('noibat',status) and find_in_set('hienthi',status) order by numb,id desc", array('tin-tuc'), 'result', 7200);
     
-    $thuonghieu = $cache->get("select name$lang, photo, link from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('thuong-hieu'), 'result', 7200);
-    
-    $slogandangky = $cache->get("select name$lang, content$lang from #_static where type = ? limit 0,1", array('slogan-dangky'), 'fetch', 7200);
-//need
+    //need
     /* SEO */
     $seoDB = $seo->getOnDB(0,'setting','update','setting');
     if(!empty($seoDB['title'.$seolang])) $seo->set('h1',$seoDB['title'.$seolang]);

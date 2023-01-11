@@ -1,13 +1,39 @@
+bảng giá cấp 1
 
+menu scrool xuống cho nhỏ lại xíu
+
+slide k cho link vào hình
+
+link vào nút xem thêm , nhập tieu đề
+
+trang trong tin tức 3 hàng ngang
+
+banner 1 hình nhập tiêu đề
+
+blog cố định nút xem thêm
+
+dk thêm sđt
+
+prodetail hình nhỏ lại xíu
+
+sp nhập 1 giá
 
 news
-	
+	dich vu 1 cap
+	bangia
+	tin tuc
 newsletter
-	
+	ht mail nd
 photo
-	
+	logo
+	slide
+	banner
+	logo footer
+social
 product
-	
+	pro cấp 1
 	
 static
-	
+	ve chung toi
+	lien he
+	footer

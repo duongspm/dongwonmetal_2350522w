@@ -5,7 +5,7 @@
 	date_default_timezone_set('Asia/Ho_Chi_Minh');
 
 	/* Cấu hình coder */
-	define('NN_CONTRACT', '2445622');
+	define('NN_CONTRACT', '2350522');
 	define('NN_AUTHOR', 'tranvduong.nina@gmail.com');
 
 	/* Cấu hình chung */
@@ -18,12 +18,12 @@
 		'arrayDomainSSL' => array(),
 		'database' => array(
 			'server-name' => $_SERVER["SERVER_NAME"],
-			'url' => '/2023/01/caohiep_2445622w/', // Thay
+			'url' => '/2023/01/dongwonmetal_2350522w/', // Thay
 			'type' => 'mysql',
 			'host' => 'localhost',
 			'username' => 'root',
 			'password' => '',
-			'dbname' => '2023-01_caoxuanhiep_2445622w',//Thay
+			'dbname' => '2023-01_dongwonmetal_2350522w',//Thay
 			'port' => 3306,
 			'prefix' => 'table_',
 			'charset' => 'utf8mb4'

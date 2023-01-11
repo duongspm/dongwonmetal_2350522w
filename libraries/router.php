@@ -94,16 +94,16 @@ $requick = array(
 	/* Sản phẩm */
 	array("tbl" => "product_list", "field" => "idl", "source" => "product", "com" => "san-pham", "type" => "san-pham"),
 	array("tbl" => "product", "field" => "id", "source" => "product", "com" => "san-pham", "type" => "san-pham", "menu" => true),
-	array("tbl" => "product_cat", "field" => "idc", "source" => "product", "com" => "san-pham", "type" => "san-pham"),
 	
 	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "tin-tuc", "type" => "tin-tuc", "menu" => true),
 
 	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "dich-vu", "type" => "dich-vu", "menu" => true),
 	array("tbl" => "news_list", "field" => "idl", "source" => "news", "com" => "dich-vu", "type" => "dich-vu", "menu" => true),
 
-	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "du-an", "type" => "du-an", "menu" => true),
+	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "bang-gia", "type" => "bang-gia", "menu" => true),
+	array("tbl" => "news_list", "field" => "idl", "source" => "news", "com" => "bang-gia", "type" => "bang-gia", "menu" => true),
 	
-	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "gioi-thieu", "type" => "gioi-thieu", "menu" => true),
+	array("tbl" => "static", "field" => "id", "source" => "static", "com" => "gioi-thieu", "type" => "gioi-thieu", "menu" => true),
 	
 	/* Liên hệ */
 	array("tbl" => "", "field" => "id", "source" => "", "com" => "lien-he", "type" => "", "menu" => true),
@@ -150,6 +150,14 @@ switch ($com) {
 		$titleMain = null;
 		break;
 		
+	case 'gioi-thieu':
+		$source = "static";
+		$template = "static/static";
+		$type = $com;
+		$seo->set('type','article');
+		$titleMain = gioithieu;
+		break;
+
 	case 'tin-tuc':
 		$source = "news";
 		$template = isset($_GET['id']) ? "news/news_detail" : "news/news";
@@ -158,12 +166,12 @@ switch ($com) {
 		$titleMain = "Tin tức";
 		break;
 		
-	case 'du-an':
+	case 'bang-gia':
 		$source = "news";
 		$template = isset($_GET['id']) ? "news/news_detail" : "news/news";
 		$seo->set('type', isset($_GET['id']) ? "article" : "object");
 		$type = $com;
-		$titleMain = "Dự án";
+		$titleMain = "Bảng giá";
 		break;
 
 	case 'gioi-thieu':

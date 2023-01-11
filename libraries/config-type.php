@@ -40,7 +40,8 @@ $config['seopage']['page'] = array(
     "san-pham" => "Sản phẩm",
     "tin-tuc" => "Tin tức",
     "gioi-thieu" => "Giới thiệu",
-    "lien-he" => "Liên hệ"
+    "dich-vu" => "Dịch vụ",
+    "bang-gia" => "Bảng giá"
 );
 $config['seopage']['width'] = 300;
 $config['seopage']['height'] = 200;

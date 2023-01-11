@@ -10,9 +10,18 @@
         data-navcontainer=".control-slideshow">
         <?php foreach($slider as $v) { ?>
         <div class="slideshow-item" owl-item-animation>
-            <a class="slideshow-image" href="<?=$v['link']?>" target="_blank" title="<?=$v['name'.$lang]?>">
-                <?=$func->getImage(['class' => 'lazy w-100', 'sizes' => '1366x655x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]])?>
-            </a>
+            <div class="slideshow__img">
+                <?=$func->getImage(['class' => 'lazy w-100', 'sizes' => '1366x605x1', 'upload' => UPLOAD_PHOTO_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]])?>
+            </div>
+            <div class="slideshow__content">
+                <span class="slideshow__name">
+                    <?=$v['name'.$lang]?>
+                </span>
+                <a class="text-decoration-none slideshow__xemthem" href="<?=$v['link']?>" target="_blank"
+                    title="<?=$v['name'.$lang]?>">
+                    Xem thêm
+                </a>
+            </div>
         </div>
         <?php } ?>
     </div>

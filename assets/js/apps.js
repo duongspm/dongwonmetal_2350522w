@@ -38,11 +38,20 @@ NN_FRAMEWORK.GoTop = function(){
         $('html, body').animate({scrollTop : 0},800);
         return false; 
     });
+    
     $(window).scroll(function(){
         if($(this).scrollTop()){
             $('.menu').addClass('sticky');
         }else{
             $('.menu').removeClass('sticky');
+        }
+    });
+
+    $(window).scroll(function(){
+        if($(this).scrollTop()){
+            $('.menu__logo').addClass('stickyy');
+        }else{
+            $('.menu__logo').removeClass('stickyy');
         }
     });
 
@@ -558,7 +567,7 @@ NN_FRAMEWORK.SlickBlog = () => {
         autoplay: true,
         autoplaySpeed: 3000,
         speed: 1000,
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
         vertical: true,
         responsive: [
